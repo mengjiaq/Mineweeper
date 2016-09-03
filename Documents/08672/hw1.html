@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Homework1</title>
+  <style media="screen">
+  div {
+    background-color: #f0c18a;
+    overflow: hidden;
+    border: 1px solid black;
+    width: 180px;
+    padding: 10px;
+    margin: 10px;
+  }
+  input[type = "button"] {
+    width: 40px;
+  }
+  input {
+
+  }
+  </style>
+</head>
+<body>
+  <div class="write">
+      <label for="X">X</label>  <input type="text" name="name" value="" id="X">
+    <br><br>
+      <label for="Y">Y</label>  <input type="text" name="name" value="" id="Y">
+  </div>
+  <div class="cal">
+    <input type="button" id="plus" value="+" onclick="cal(id)">
+    <input type="button" id="minus" value="-" onclick="cal(id)">
+    <input type="button" id="multi" value="*" onclick="cal(id)">
+    <input type="button" id="div" value="/" onclick="cal(id)">
+
+  </div>
+  <div class="result">
+    Result  <input type="text" name="name" value="" readonly="" id="answer">
+  </div>
+<script type="text/javascript">
+  function cal(id) {
+    var x = parseFloat(document.getElementById('X').value);
+    var y = parseFloat(document.getElementById('Y').value);
+    var answer;
+    if (id == 'plus') {
+      answer = x + y;
+    } else if (id == 'minus') {
+      answer = x - y;
+    } else if (id == 'multi') {
+      answer = x * y;
+    } else if (id == 'div') {
+      answer = x / y;
+    }
+    document.getElementById('answer').value = answer;
+  }
+</script>
+</body>
+
+</html>
